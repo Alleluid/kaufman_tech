@@ -2,15 +2,16 @@ import os
 
 from flask import Flask, request
 from flask.templating import render_template
+from flask_login import LoginManager
+import util
 
 STATIC_DIR = os.path.abspath("static/")
 TEMPLATE_DIR = os.path.abspath("templates/")
 
 app = Flask(__name__)
 
-
-# login_manager = LoginManager()
-# login_manager.init_app(app)
+login_manager = LoginManager()
+login_manager.init_app(app)
 
 
 @app.route('/')
