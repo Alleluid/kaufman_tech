@@ -3,17 +3,20 @@ import os
 from flask import Flask, request
 from flask.templating import render_template
 from flask_login import LoginManager
-import util
+from util import get_key_from_file, User
 
 STATIC_DIR = os.path.abspath("static/")
 TEMPLATE_DIR = os.path.abspath("templates/")
 
 app = Flask(__name__)
-app.secret_key = util.get_key_from_file()
+app.secret_key = get_key_from_file()
 
 login_manager = LoginManager()
 login_manager.init_app(app)
 
+@login_manager.user_loader
+def load_user(user_id):
+    return User.get(user_id)
 
 @app.route('/')
 def index():
