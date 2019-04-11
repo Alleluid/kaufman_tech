@@ -7,6 +7,8 @@ STATIC_DIR = os.path.abspath("static/")
 TEMPLATE_DIR = os.path.abspath("templates/")
 
 app = Flask(__name__)
+
+
 # login_manager = LoginManager()
 # login_manager.init_app(app)
 
@@ -14,11 +16,6 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     return render_template("home.html")
-
-@app.route('/pyremind')
-def pyremind():
-    return render_template("pyremind.html")
-
 
 
 @app.route('/setcookie', methods=['POST', 'GET'])
@@ -46,6 +43,8 @@ def ajax():
 def projects():
     return render_template("projects.html")
 
+
+import remind.app_pyremind
 
 if __name__ == '__main__':
     app.run()
