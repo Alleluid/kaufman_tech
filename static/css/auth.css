@@ -1,0 +1,30 @@
+form {
+    margin: 35%;
+}
+
+button, input {
+    border: none;
+    border-radius: 6px;
+}
+
+button.submit {
+    border-radius: 0 6px 6px 0;
+    height: 32px;
+    border-left: black solid thin;
+}
+
+button#toggle-hidden {
+    margin-left: 10px;
+    height: 30px;
+    width: 30px;
+    border-radius: 10px;
+}
+
+input#passwd {
+    border-radius: 6px 0 0 6px;
+    height: 32px;
+}
+
+label h4 {
+    margin-left: 25%;
+}

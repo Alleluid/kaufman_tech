@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block custom_head %}<link rel="stylesheet" href="{{ url_for('static', filename='css/auth.css') }}">{% endblock %}
+{% block content %}
+<form>
+    <label>
+        <h4>Password</h4>
+        <input id="passwd" type="password"><button class="submit" type="submit"><span class="oi oi-check"></span></button><button id="toggle-hidden" type="button"><span class="oi oi-eye"></span></button>
+    </label>
+</form>
+{% endblock %}
+{% block custom_script %}<script src="{{ url_for('static', filename='js/auth.js') }}"></script>{% endblock %}

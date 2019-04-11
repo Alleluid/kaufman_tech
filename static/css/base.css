@@ -1,0 +1,29 @@
+body {
+    background-color: #1b1e21;
+    color: #c6c8ca;
+    font-family: Roboto, Helvetica, Arial, serif;
+}
+
+a:link, a:visited {
+    color: white;
+}
+
+a:hover {
+    color: #9fcdff;
+}
+
+nav {
+    border-radius: 0 0 6px 6px;
+}
+
+nav a {
+    margin-right: 1em;
+}
+
+nav ul.dropdown-menu a {
+    margin-left: 1em;
+}
+
+ul.dropdown-menu > li > a:link, ul.dropdown-menu > li > a:visited {
+    color: #171a1d;
+}

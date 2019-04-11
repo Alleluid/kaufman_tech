@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Alex Kaufman Tech</title>
+    <link href="{{ url_for('static', filename='css/bootstrap.css') }}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <link href="{{ url_for('static', filename='open-iconic/font/css/open-iconic-bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/base.css') }}" rel="stylesheet">
+    {% block custom_head %}{% endblock %}
+</head>
+<body>
+<div class="container div-holder">
+    <nav class="navbar navbar-expand-md bg-dark" style="margin-bottom: 1em">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                {#                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">#}
+                {#                  <span class="sr-only">Toggle navigation</span>#}
+                {#                  <span class="icon-bar"></span>#}
+                {#                  <span class="icon-bar"></span>#}
+                {#                  <span class="icon-bar"></span>#}
+                {#                </button>#}
+                <a class="navbar-brand" href="/">Alex Kaufman</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="/pyremind">PyreMind</a></li>
+                    <li><a href="/projects">Projects</a></li>
+                    <li><a href="/test">Testing</a></li>
+                    <li><a href="/auth">Auth</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                           aria-expanded="false">Links <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Images</a></li>
+                            <li><a href="#">Videos</a></li>
+                            <li><a href="#">Text</a></li>
+                            <li><a href="#">Files</a></li>
+                            {#<li><a href="#">Something else here</a></li>#}
+                            {#<li role="separator" class="divider"></li>#}
+                            {#<li class="dropdown-header">Nav header</li>#}
+                            {#<li><a href="#">Separated link</a></li>#}
+                            {#<li><a href="#">One more separated link</a></li>#}
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    {% block content %}
+    {% endblock content %}
+</div>
+<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/bootstrap.bundle.js') }}"></script>
+<script src="{{ url_for('static', filename='js/base.js') }}"></script>
+{% block custom_script %}{% endblock %}
+</body>
+</html>

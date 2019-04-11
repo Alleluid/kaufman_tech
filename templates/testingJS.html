@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+{% block custom_head %}<link href="{{ url_for('static', filename='css/testing.css') }}" rel="stylesheet">{% endblock %}
+
+<div class="div-left">
+    <p class="para1">This is the first paragraph in the left container.</p>
+</div>
+<div class="div-right">
+    <p class="para1">This is the first paragraph in the right container.</p>
+</div>
+
+{% block custom_script %}<script src="{{ url_for('static', filename='js/testing.js') }}"></script>{% endblock %}
+{% endblock content %}
