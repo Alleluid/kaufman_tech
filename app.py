@@ -9,6 +9,7 @@ STATIC_DIR = os.path.abspath("static/")
 TEMPLATE_DIR = os.path.abspath("templates/")
 
 app = Flask(__name__)
+app.secret_key = util.get_key_from_file()
 
 login_manager = LoginManager()
 login_manager.init_app(app)
