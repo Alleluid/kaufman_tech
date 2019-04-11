@@ -4,6 +4,7 @@ from datetime import datetime, timedelta
 def timedelta_from_str(delta_str: str, default: timedelta = timedelta(days=1), strip_secs=True) -> timedelta:
     """Matches a string of [num unit(s)] to the described `timedelta`.
 
+    :param strip_secs:
     :param delta_str:
     :param default: `timedelta` used if string doesn't match. Default is 1 day.
     :return:
